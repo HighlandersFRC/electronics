@@ -1,2 +1,4 @@
-# electronics
-Various electronics-related projects
+# Electronics Projects
+Various electronics-related projects.
+
+
