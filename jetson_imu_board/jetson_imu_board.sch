@@ -88,64 +88,22 @@ F 3 "" H 8400 2000 50  0000 C CNN
 	1    8400 2000
 	1    0    0    -1  
 $EndComp
-Text Label 7800 1100 0    60   ~ 0
-IMU_PS0
-Text Label 7800 1200 0    60   ~ 0
-IMU_PS1
-Text Label 7800 1300 0    60   ~ 0
-IMU_INT
 Text Label 7800 1400 0    60   ~ 0
 IMU_ADR
-Text Label 7800 1750 0    60   ~ 0
-IMU_VIN
-Text Label 7800 1850 0    60   ~ 0
-IMU_3VO
-Text Label 7800 1950 0    60   ~ 0
-IMU_GND
 Text Label 7800 2050 0    60   ~ 0
-IMU_SDA
+JET_SDA
 Text Label 7800 2150 0    60   ~ 0
-IMU_SCL
+JET_SCL
 Text Label 7800 2250 0    60   ~ 0
 IMU_RST
-$Comp
-L GND #PWR01
-U 1 1 580D6C71
-P 1000 2550
-F 0 "#PWR01" H 1000 2300 50  0001 C CNN
-F 1 "GND" H 1000 2400 50  0000 C CNN
-F 2 "" H 1000 2550 50  0000 C CNN
-F 3 "" H 1000 2550 50  0000 C CNN
-	1    1000 2550
-	1    0    0    -1  
-$EndComp
-Text Label 1500 2100 2    60   ~ 0
-IMU_GND
-Text Label 1500 2300 2    60   ~ 0
-JET_GND
 Text Label 5200 6700 2    60   ~ 0
 JET_GND
 Text Label 5200 6600 2    60   ~ 0
 JET_3V3
 Text Label 2250 6400 0    60   ~ 0
-IMU_SCL
+JET_SCL
 Text Label 2250 6500 0    60   ~ 0
-IMU_SDA
-$Comp
-L +3V3 #PWR02
-U 1 1 580D6F0B
-P 1000 1050
-F 0 "#PWR02" H 1000 900 50  0001 C CNN
-F 1 "+3V3" H 1000 1190 50  0000 C CNN
-F 2 "" H 1000 1050 50  0000 C CNN
-F 3 "" H 1000 1050 50  0000 C CNN
-	1    1000 1050
-	1    0    0    -1  
-$EndComp
-Text Label 1500 1450 2    60   ~ 0
-IMU_VIN
-Text Label 1500 1650 2    60   ~ 0
-JET_3V3
+JET_SDA
 $Comp
 L CONN_01X02 P3
 U 1 1 580D713E
@@ -168,42 +126,12 @@ F 3 "" H 5650 1650 50  0000 C CNN
 	1    5650 1650
 	-1   0    0    1   
 $EndComp
-$Comp
-L GND #PWR03
-U 1 1 580D740A
-P 5650 1900
-F 0 "#PWR03" H 5650 1650 50  0001 C CNN
-F 1 "GND" H 5650 1750 50  0000 C CNN
-F 2 "" H 5650 1900 50  0000 C CNN
-F 3 "" H 5650 1900 50  0000 C CNN
-	1    5650 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3V3 #PWR04
-U 1 1 580D7475
-P 5150 1000
-F 0 "#PWR04" H 5150 850 50  0001 C CNN
-F 1 "+3V3" H 5150 1140 50  0000 C CNN
-F 2 "" H 5150 1000 50  0000 C CNN
-F 3 "" H 5150 1000 50  0000 C CNN
-	1    5150 1000
-	1    0    0    -1  
-$EndComp
 Text Label 2250 6750 0    60   ~ 0
 JET_GPIO57
 Text Label 5200 7450 2    60   ~ 0
 JET_1V8
 Wire Wire Line
-	8200 1100 7800 1100
-Wire Wire Line
-	8200 1200 7800 1200
-Wire Wire Line
-	8200 1300 7800 1300
-Wire Wire Line
 	8200 1750 7800 1750
-Wire Wire Line
-	8200 1850 7800 1850
 Wire Wire Line
 	8200 1950 7800 1950
 Wire Wire Line
@@ -212,13 +140,6 @@ Wire Wire Line
 	8200 2150 7800 2150
 Wire Wire Line
 	8200 2250 7800 2250
-Wire Wire Line
-	1000 2100 1000 2550
-Wire Wire Line
-	1000 2100 1500 2100
-Wire Wire Line
-	1000 2300 1500 2300
-Connection ~ 1000 2300
 Wire Wire Line
 	4250 6800 4250 6700
 Wire Wire Line
@@ -236,19 +157,12 @@ Wire Wire Line
 Wire Wire Line
 	3950 6500 2250 6500
 Wire Wire Line
-	1000 1050 1000 1650
-Wire Wire Line
-	1000 1650 1500 1650
-Wire Wire Line
-	1000 1450 1500 1450
-Connection ~ 1000 1450
-Wire Wire Line
 	5650 1300 5650 1500
 Wire Wire Line
 	5650 1400 8200 1400
 Connection ~ 5650 1400
 Wire Wire Line
-	5650 1800 5650 1900
+	5650 1800 5650 2050
 Wire Wire Line
 	5550 1300 5550 1400
 Wire Wire Line
@@ -276,23 +190,12 @@ F 3 "" H 3400 1100 60  0001 C CNN
 $EndComp
 Wire Wire Line
 	2300 1600 2950 1600
-Text Label 2300 1300 0    60   ~ 0
+Text Label 2300 1000 0    60   ~ 0
 JET_1V8
 Wire Wire Line
 	3850 1600 4550 1600
 Wire Wire Line
 	4550 1000 4550 2050
-$Comp
-L +3V3 #PWR05
-U 1 1 580EBAD8
-P 4550 1000
-F 0 "#PWR05" H 4550 850 50  0001 C CNN
-F 1 "+3V3" H 4550 1140 50  0000 C CNN
-F 2 "" H 4550 1000 50  0000 C CNN
-F 3 "" H 4550 1000 50  0000 C CNN
-	1    4550 1000
-	1    0    0    -1  
-$EndComp
 $Comp
 L C C3
 U 1 1 580EBB01
@@ -304,22 +207,11 @@ F 3 "" H 4550 2200 50  0000 C CNN
 	1    4550 2200
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR06
-U 1 1 580EBB51
-P 4550 2500
-F 0 "#PWR06" H 4550 2250 50  0001 C CNN
-F 1 "GND" H 4550 2350 50  0000 C CNN
-F 2 "" H 4550 2500 50  0000 C CNN
-F 3 "" H 4550 2500 50  0000 C CNN
-	1    4550 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2300 1300 2300 2550
+	2300 1000 2300 2550
 Connection ~ 2300 1600
 Wire Wire Line
-	4550 2350 4550 2500
+	4550 2350 4550 2650
 Wire Wire Line
 	2350 1500 2950 1500
 Text Label 2350 1500 0    60   ~ 0
@@ -352,23 +244,12 @@ F 3 "" H 2650 2700 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	2650 2400 2650 2550
-$Comp
-L GND #PWR07
-U 1 1 580EC104
-P 2650 2950
-F 0 "#PWR07" H 2650 2700 50  0001 C CNN
-F 1 "GND" H 2650 2800 50  0000 C CNN
-F 2 "" H 2650 2950 50  0000 C CNN
-F 3 "" H 2650 2950 50  0000 C CNN
-	1    2650 2950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2300 2850 2300 2950
 Wire Wire Line
 	2300 2950 2900 2950
 Wire Wire Line
-	2650 2850 2650 2950
+	2650 2850 2650 3200
 Wire Wire Line
 	2400 2400 2950 2400
 Connection ~ 2650 2400
@@ -544,4 +425,133 @@ Text Notes 8700 3000 0    60   ~ 0
 Breakout for GPIOs
 Text Notes 8700 1650 0    60   ~ 0
 IMU Board
+NoConn ~ 2450 3800
+NoConn ~ 2550 3800
+NoConn ~ 2650 3800
+NoConn ~ 2750 3800
+NoConn ~ 2850 3800
+NoConn ~ 2950 3800
+NoConn ~ 3050 3800
+NoConn ~ 3150 3800
+NoConn ~ 3250 3800
+NoConn ~ 3350 3800
+NoConn ~ 3450 3800
+NoConn ~ 3550 3800
+NoConn ~ 3650 3800
+NoConn ~ 3750 3800
+NoConn ~ 3850 3800
+NoConn ~ 3950 3800
+NoConn ~ 4050 3800
+NoConn ~ 4150 3800
+NoConn ~ 4250 3800
+NoConn ~ 4350 3800
+NoConn ~ 4450 3800
+NoConn ~ 4550 3800
+NoConn ~ 4650 3800
+NoConn ~ 4750 3800
+NoConn ~ 4850 3800
+NoConn ~ 2450 4750
+NoConn ~ 2550 4750
+NoConn ~ 2650 4750
+NoConn ~ 2750 4750
+NoConn ~ 2850 4750
+NoConn ~ 2950 4750
+NoConn ~ 3050 4750
+NoConn ~ 3150 4750
+NoConn ~ 3250 4750
+NoConn ~ 3350 4750
+NoConn ~ 3450 4750
+NoConn ~ 3550 4750
+NoConn ~ 3650 4750
+NoConn ~ 3750 4750
+NoConn ~ 3850 4750
+NoConn ~ 3950 4750
+NoConn ~ 4150 4750
+NoConn ~ 4250 4750
+NoConn ~ 4350 4750
+NoConn ~ 4450 4750
+NoConn ~ 4550 4750
+NoConn ~ 4650 4750
+NoConn ~ 4750 4750
+NoConn ~ 4850 4750
+NoConn ~ 2450 5350
+NoConn ~ 2550 5350
+NoConn ~ 2650 5350
+NoConn ~ 2750 5350
+NoConn ~ 2850 5350
+NoConn ~ 3650 5350
+NoConn ~ 3750 5350
+NoConn ~ 3850 5350
+NoConn ~ 3950 5350
+NoConn ~ 4050 5350
+NoConn ~ 4150 5350
+NoConn ~ 4250 5350
+NoConn ~ 4350 5350
+NoConn ~ 4450 5350
+NoConn ~ 4550 5350
+NoConn ~ 4650 5350
+NoConn ~ 4750 5350
+NoConn ~ 4850 5350
+NoConn ~ 2550 6800
+NoConn ~ 2650 6800
+NoConn ~ 2750 6800
+NoConn ~ 2850 6800
+NoConn ~ 2950 6800
+NoConn ~ 3050 6800
+NoConn ~ 3150 6800
+NoConn ~ 3250 6800
+NoConn ~ 3350 6800
+NoConn ~ 3450 6800
+NoConn ~ 3550 6800
+NoConn ~ 3650 6800
+NoConn ~ 3750 6800
+NoConn ~ 3850 6800
+NoConn ~ 4350 6800
+NoConn ~ 4450 6800
+NoConn ~ 4550 6800
+NoConn ~ 4650 6800
+NoConn ~ 4750 6800
+NoConn ~ 4850 6800
+NoConn ~ 2450 7300
+NoConn ~ 2550 7300
+NoConn ~ 2650 7300
+NoConn ~ 2750 7300
+NoConn ~ 2850 7300
+NoConn ~ 2950 7300
+NoConn ~ 3050 7300
+NoConn ~ 3150 7300
+NoConn ~ 3250 7300
+NoConn ~ 3350 7300
+NoConn ~ 3450 7300
+NoConn ~ 3550 7300
+NoConn ~ 3650 7300
+NoConn ~ 3750 7300
+NoConn ~ 3850 7300
+NoConn ~ 3950 7300
+NoConn ~ 4050 7300
+NoConn ~ 4150 7300
+NoConn ~ 4250 7300
+NoConn ~ 4350 7300
+NoConn ~ 4450 7300
+NoConn ~ 4550 7300
+NoConn ~ 4650 7300
+NoConn ~ 4850 7300
+NoConn ~ 8200 1850
+NoConn ~ 8200 1100
+NoConn ~ 8200 1200
+NoConn ~ 8200 1300
+Text Label 4550 1000 2    60   ~ 0
+JET_3V3
+Text Label 5150 1000 2    60   ~ 0
+JET_3V3
+Text Label 7800 1750 0    60   ~ 0
+JET_3V3
+Text Label 7800 1950 0    60   ~ 0
+JET_GND
+Text Label 5650 2050 0    60   ~ 0
+JET_GND
+Text Label 4550 2650 0    60   ~ 0
+JET_GND
+Text Label 2650 3200 0    60   ~ 0
+JET_GND
 $EndSCHEMATC
