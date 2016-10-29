@@ -61,7 +61,7 @@ U 1 1 580D6625
 P 3900 4500
 F 0 "P2" H 4350 5600 60  0000 C CNN
 F 1 "J3A2" V 3350 4100 60  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x25_Pitch2.00mm" H 4100 1950 60  0001 C CNN
+F 2 "jetson_imu_footprints:Pin_Header_Straight_3x25_Pitch2.00mm" H 4100 1950 60  0001 C CNN
 F 3 "" H 4100 1950 60  0001 C CNN
 	1    3900 4500
 	0    1    -1   0   
